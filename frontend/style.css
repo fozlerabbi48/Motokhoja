@@ -6,343 +6,636 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f6f8;
-    color: #171717;
+    background: #f0f2f5;
+    color: #1c1e21;
 }
 
-html {
-    scroll-behavior: smooth;
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
 }
 
-.navbar {
-    height: 75px;
-    background: #111827;
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.topbar {
+    height: 70px;
+    background: #ffffff;
+    border-bottom: 1px solid #dddfe2;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 7%;
+    padding: 0 30px;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo {
-    color: white;
-    font-size: 28px;
-    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 230px;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #1877f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.logo h1 {
+    font-size: 22px;
+    color: #1877f2;
 }
 
 .logo span {
-    color: #f97316;
-}
-
-.navbar nav {
-    display: flex;
-    gap: 30px;
-}
-
-.navbar nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.navbar nav a:hover {
-    color: #f97316;
-}
-
-.hero {
-    min-height: 550px;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(17, 24, 39, 0.97),
-            rgba(17, 24, 39, 0.75),
-            rgba(17, 24, 39, 0.3)
-        ),
-        url("../uploads/r15.jpg");
-
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 70px 7%;
-}
-
-.hero-content {
-    max-width: 650px;
-}
-
-.small-title {
-    color: #f97316;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    color: white;
-    font-size: 60px;
-    line-height: 1.05;
-    margin-bottom: 25px;
-}
-
-.hero h1 span {
-    color: #f97316;
     display: block;
-}
-
-.hero-text {
-    color: #d1d5db;
-    font-size: 18px;
-    line-height: 1.7;
-    max-width: 550px;
-    margin-bottom: 35px;
-}
-
-.hero-button {
-    display: inline-block;
-    background: #f97316;
-    color: white;
-    padding: 15px 28px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero-button:hover {
-    background: #ea580c;
-}
-
-.search-section {
-    padding: 40px 7%;
-    background: white;
+    font-size: 11px;
+    color: #65676b;
+    margin-top: 2px;
 }
 
 .search-box {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 15px;
-}
-
-.search-box input,
-.search-box select {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 7px;
-    outline: none;
-    font-size: 15px;
-    background: white;
-}
-
-.search-box input:focus,
-.search-box select:focus {
-    border-color: #f97316;
-}
-
-.bike-section {
-    padding: 80px 7%;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.section-heading p {
-    color: #f97316;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.section-heading h2 {
-    font-size: 38px;
-}
-
-.bike-grid {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-.bike-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-    transition: 0.3s;
-}
-
-.bike-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-}
-
-.bike-image {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    background: #e5e7eb;
-}
-
-.bike-info {
-    padding: 20px;
-}
-
-.bike-brand {
-    color: #f97316;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-}
-
-.bike-name {
-    font-size: 21px;
-    margin-bottom: 15px;
-}
-
-.bike-details {
+    width: 430px;
+    height: 42px;
+    background: #f0f2f5;
+    border-radius: 22px;
     display: flex;
+    align-items: center;
+    padding: 0 16px;
     gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 18px;
 }
 
-.detail {
-    background: #f3f4f6;
-    padding: 6px 9px;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
-.bike-price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #111827;
-}
-
-.loading {
-    text-align: center;
-    font-size: 18px;
-    padding: 40px;
-}
-
-.no-bike {
-    display: none;
-    text-align: center;
-    padding: 40px;
-    color: #777;
-}
-
-.about {
-    background: #111827;
-    color: white;
-    padding: 90px 7%;
-}
-
-.about > div {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-}
-
-.about p:first-child {
-    color: #f97316;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-.about h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.about h2 span {
-    color: #f97316;
-}
-
-.about p:last-child {
-    color: #d1d5db;
-    line-height: 1.8;
+.search-box span {
     font-size: 17px;
 }
 
-footer {
-    background: #080d17;
-    color: #9ca3af;
-    padding: 30px 7%;
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+.home-button {
+    margin-left: auto;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #f0f2f5;
+    font-size: 19px;
+}
+
+.home-button:hover {
+    background: #e4e6eb;
+}
+
+.page {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 180px minmax(0, 720px);
+    gap: 25px;
+    padding: 25px 20px 50px;
+}
+
+.left-sidebar {
+    padding-top: 5px;
+}
+
+.sidebar-item {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 15px;
+    color: #444;
+    font-size: 15px;
+}
+
+.sidebar-item span {
+    font-size: 21px;
+}
+
+.sidebar-item:hover {
+    background: #e4e6eb;
+}
+
+.sidebar-item.active {
+    background: #e7f3ff;
+    color: #1877f2;
+}
+
+.feed {
+    width: 100%;
+    min-width: 0;
+}
+
+.create-post {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.create-post-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.generic-avatar {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    background: #1877f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.post-input-button {
+    flex: 1;
+    height: 44px;
+    border-radius: 22px;
+    background: #f0f2f5;
+    color: #65676b;
+    text-align: left;
+    padding: 0 18px;
+    font-size: 15px;
+}
+
+.post-input-button:hover {
+    background: #e4e6eb;
+}
+
+.create-post-actions {
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 12px;
+    display: flex;
+}
+
+.create-post-actions button {
+    flex: 1;
+    height: 40px;
+    background: transparent;
+    color: #555;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.create-post-actions button:hover {
+    background: #f0f2f5;
+}
+
+.create-post-actions button:first-child {
+    color: #45bd62;
+}
+
+.create-post-actions button:last-child {
+    color: #1877f2;
+}
+
+.feed-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 }
 
-footer .logo {
+.feed-header h2 {
+    font-size: 20px;
+}
+
+.feed-header select {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 7px;
+    outline: none;
+}
+
+.post-card {
+    background: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: #1877f2;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.post-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.post-user-info strong {
+    font-size: 15px;
+}
+
+.post-user-info span {
+    color: #65676b;
+    font-size: 12px;
+}
+
+.post-caption {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 15px 0;
+    white-space: pre-wrap;
+}
+
+.bike-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0f2f5;
+    border-radius: 9px;
+    padding: 11px 13px;
+    margin-bottom: 12px;
+}
+
+.bike-info-icon {
     font-size: 22px;
 }
 
-@media (max-width: 1000px) {
+.bike-info strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
 
-    .bike-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.bike-info span {
+    color: #65676b;
+    font-size: 12px;
+}
 
-    .hero h1 {
-        font-size: 50px;
+.post-image {
+    width: 100%;
+    max-height: 560px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    background: #f0f2f5;
+}
+
+.post-stats {
+    padding: 12px 3px 8px;
+    color: #65676b;
+    font-size: 13px;
+}
+
+.post-actions {
+    border-top: 1px solid #e4e6eb;
+    display: flex;
+    gap: 5px;
+    padding-top: 7px;
+}
+
+.post-actions button {
+    flex: 1;
+    height: 38px;
+    border-radius: 7px;
+    background: transparent;
+    color: #65676b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.post-actions button:hover {
+    background: #f0f2f5;
+}
+
+.post-actions .like-button.liked {
+    color: #1877f2;
+}
+
+.loading {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 50px 20px;
+    text-align: center;
+    color: #65676b;
+}
+
+.loading h3 {
+    color: #333;
+    margin: 12px 0 6px;
+}
+
+.loading p {
+    font-size: 14px;
+}
+
+.loader {
+    width: 35px;
+    height: 35px;
+    border: 4px solid #e4e6eb;
+    border-top-color: #1877f2;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: spin 0.8s linear infinite;
+}
+
+.retry-button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border-radius: 7px;
+    background: #1877f2;
+    color: white;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
 
-@media (max-width: 750px) {
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 500;
+}
 
-    .navbar {
-        padding: 0 5%;
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    width: 100%;
+    max-width: 540px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #dddfe2;
+}
+
+.modal-header h2 {
+    font-size: 19px;
+}
+
+.modal-header button {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f0f2f5;
+    font-size: 24px;
+    color: #555;
+}
+
+#postForm {
+    padding: 20px;
+}
+
+.modal-title {
+    color: #65676b;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+#postForm input[type="text"],
+#postForm textarea {
+    width: 100%;
+    border: 1px solid #ccd0d5;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+#postForm input[type="text"]:focus,
+#postForm textarea:focus {
+    border-color: #1877f2;
+}
+
+.bike-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 100px;
+    gap: 8px;
+}
+
+.upload-box {
+    border: 2px dashed #ccd0d5;
+    border-radius: 9px;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 2px;
+}
+
+.upload-box:hover {
+    background: #f7f8fa;
+    border-color: #1877f2;
+}
+
+.upload-icon {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.upload-box strong {
+    font-size: 14px;
+}
+
+.upload-box small {
+    color: #65676b;
+    margin-top: 5px;
+}
+
+.upload-box input {
+    display: none;
+}
+
+#imagePreview {
+    margin-top: 12px;
+}
+
+#imagePreview img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.publish {
+    width: 100%;
+    height: 44px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: #1877f2;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.publish:hover {
+    background: #166fe5;
+}
+
+.publish:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: #1c1e21;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 900px) {
+
+    .topbar {
+        padding: 0 15px;
     }
 
-    .navbar nav {
+    .logo {
+        min-width: auto;
+    }
+
+    .logo h1 {
+        font-size: 19px;
+    }
+
+    .logo span {
         display: none;
     }
 
-    .hero {
-        padding: 60px 5%;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
     .search-box {
+        width: 100%;
+        max-width: 350px;
+        margin-left: 20px;
+    }
+
+    .page {
         grid-template-columns: 1fr;
+        max-width: 760px;
     }
 
-    .bike-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .bike-section {
-        padding: 60px 5%;
+    .left-sidebar {
+        display: none;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
-    .bike-grid {
+    .topbar {
+        height: 60px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+
+    .logo h1 {
+        font-size: 17px;
+    }
+
+    .search-box {
+        margin-left: 10px;
+        height: 38px;
+    }
+
+    .home-button {
+        display: none;
+    }
+
+    .page {
+        padding: 12px 8px 30px;
+    }
+
+    .create-post,
+    .post-card,
+    .loading {
+        border-radius: 8px;
+    }
+
+    .bike-inputs {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
-    .hero h1 {
-        font-size: 36px;
+    .post-image {
+        max-height: 450px;
     }
 
-    footer {
-        flex-direction: column;
-        gap: 15px;
+    .feed-header h2 {
+        font-size: 18px;
     }
 }
